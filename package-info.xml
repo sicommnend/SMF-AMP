@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>NEND:smfamp</id>
+	<name>Accelerated Mobile Pages</name>
+	<version>0.0.1</version>
+	<type>modification</type>
+<install>
+	<readme parsebbc="true">license.txt</readme>
+	<modification format="xml" type="file">install.xml</modification>
+	<require-file name="Sources/Amp.php" destination="$sourcedir" />
+	<require-file name="Sources/Amp.template.php" destination="$themedir" />
+</install>
+<uninstall>
+	<modification reverse="true">install.xml</modification>
+	<remove-file name="Sources/Amp.php" destination="$sourcedir" />
+	<remove-file name="Sources/Amp.template.php" destination="$themedir" />
+</uninstall>
+</package-info>
